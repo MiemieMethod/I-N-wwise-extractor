@@ -1,0 +1,616 @@
+# Unreal Engine 4 - Unreal Tournament 4 (*WindowsNoEditor.pak) (script 0.4.27e version 3)
+# script for QuickBMS http://quickbms.aluigi.org
+# credits to LukeFZ for the whole keychain scheme
+
+quickbmsver "0.12"
+callfunction QUICKBMS_4GB_CHECK 1
+
+set MEMORY_FILE100 compressed "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"
+
+# set your AES_KEY here as umodel hex ("0x1122...") or C string ("\x11\x22...")
+# don't change AES_KEY_IS_SET, it will be handled automatically
+set AES_KEY binary ""
+
+math NEW = 1 			# set to 0 for old CBT versions
+math AES_KEY_IS_SET = 0
+math CHECK_GUID = 0
+
+# you need to place PACDKCDelay/keys.json file into the folder with packages before using the script
+#string KEYFILE = "PACDKCDelay.bin"
+string KEYFILE = "keys.json"
+
+
+get FILE_NAME filename
+if FILE_NAME = "keys.json"
+	callfunction DUMP_KEYS_JSON 1
+	cleanexit
+elif FILE_NAME = "PACDKCDelay.bin"
+	callfunction DUMP_KEYS 1
+	cleanexit
+endif
+
+math NO_TAIL_INFO = 0   # set it to 1 for archives with corrupt/missing tail information (extract without index)
+math VERSION = 3        # set it to 3 if NO_TAIL_INFO = 1 for most of modern games
+
+math TOC_FILE = 0
+math ALTERNATIVE_MODE = 0
+math BASE_PATH_INCLUDED = 1
+math DIR_FLAG = 1
+math NAME_FROM_ARRAY = 0
+math SKIP_COUNT = 0
+
+get ARCHIVE_NAME basename
+get ARCHIVE_PATH FILEPATH
+
+math CHUNK_OFFSET_ABSOLUTE = -1 # default, enabled
+
+# 1 = HIT
+math WORKAROUND = 0
+
+if NO_TAIL_INFO != 0
+    get OFFSET asize
+    math ALTERNATIVE_MODE = 1
+else
+	goto -0xdd  # custom version 13
+	getdstring GUID 16
+	goto -4 0 SEEK_CUR
+	get CHECK_GUID long
+	get ENCRYPTED byte
+	savepos MAGIC_OFF
+	get MAGIC long
+
+    get VERSION long
+    endian guess VERSION
+    get OFFSET longlong
+    get SIZE longlong
+    getdstring HASH 20
+	xmath SIZE "MAGIC_OFF - OFFSET - 1"
+	
+	get FSIZE asize
+	savepos CUR_POS
+	if CUR_POS = FSIZE
+		string COMP1 = ""
+	else
+		get CHECK byte
+		if CHECK > 1
+			goto -1 0 SEEK_CUR
+		endif
+		getdstring COMP1 32
+		getdstring COMP2 32
+		string COMP1 l COMP1
+		string COMP2 l COMP2
+	endif
+
+    if VERSION >= 3
+        goto MAGIC_OFF
+        goto -1 0 SEEK_CUR
+        get ENCRYPTED byte
+        if ENCRYPTED != 0
+            callfunction SET_AES_KEY 1
+            log MEMORY_FILE5 OFFSET SIZE
+            encryption "" ""
+        else
+			log MEMORY_FILE5 OFFSET SIZE
+        endif
+		math TOC_FILE5 = -5
+    endif
+
+    goto 0
+    callfunction GET_BASE_PATH 1
+endif
+
+get FILES long TOC_FILE5
+getdstring DUMMY 12 TOC_FILE5
+get HASHES_OFFSET longlong TOC_FILE5
+math HASHES_OFFSET - OFFSET
+get HASHES_SIZE longlong TOC_FILE5
+getdstring DUMMY 24 TOC_FILE5
+get NAMES_OFFSET longlong TOC_FILE5
+math NAMES_OFFSET - OFFSET
+get NAMES_SIZE longlong TOC_FILE5
+getdstring DUMMY 24 TOC_FILE5
+savepos BASE_INDEX_OFF TOC_FILE5
+goto NAMES_OFFSET TOC_FILE5
+
+math CHUNK_SIZE = 0x10000   # just in case...
+for i = 0 < FILES
+	callfunction GET_NAME_AND_OFFSET 1
+	if NAME = ""
+		continue NEXT0
+	endif
+	
+	savepos TMP_OFF TOC_FILE
+	
+	get OFFSET longlong TOC_FILE
+	get ZSIZE longlong TOC_FILE
+	get SIZE longlong TOC_FILE
+	get ZIP long TOC_FILE
+    getdstring HASH1 20 TOC_FILE
+	getdstring HASH2 20 TOC_FILE
+	
+    math CHUNKS = 0
+    math ENCRYPTED = 0
+    if VERSION >= 3
+        if ZIP != 0
+            get CHUNKS long TOC_FILE
+            for x = 0 < CHUNKS
+                get CHUNK_OFFSET longlong TOC_FILE
+                get CHUNK_END_OFFSET longlong TOC_FILE
+                putarray 0 x CHUNK_OFFSET
+                putarray 1 x CHUNK_END_OFFSET
+            next x
+        endif
+        get ENCRYPTED byte TOC_FILE
+        get CHUNK_SIZE long TOC_FILE
+    endif
+	
+    #if ALTERNATIVE_MODE != 0
+        savepos TMP_OFF TOC_FILE
+        math OFFSET + TMP_OFF
+    #endif
+
+    #comtype copy    
+	callfunction COMPRESSION_TYPE 1
+
+    if CHUNKS > 0
+        log NAME 0 0
+        append
+        math TMP_SIZE = SIZE
+		if CHUNK_OFFSET_ABSOLUTE < 0 && OFFSET != 0
+			getarray CHUNK_OFFSET 0 0
+			if CHUNK_OFFSET u< OFFSET
+				math CHUNK_OFFSET_ABSOLUTE = 0
+			else
+				math CHUNK_OFFSET_ABSOLUTE = 1
+			endif
+		endif
+        for x = 0 < CHUNKS
+            getarray CHUNK_OFFSET 0 x
+            getarray CHUNK_END_OFFSET 1 x
+            math CHUNK_ZSIZE = CHUNK_END_OFFSET
+            math CHUNK_ZSIZE - CHUNK_OFFSET
+            math CHUNK_XSIZE = CHUNK_ZSIZE
+            if ENCRYPTED != 0
+                callfunction SET_AES_KEY 1
+                math CHUNK_XSIZE x 16
+            endif
+            if TMP_SIZE u< CHUNK_SIZE
+                math CHUNK_SIZE = TMP_SIZE
+            endif
+            math CHUNK_OFFSET = OFFSET
+
+			if ZIP == 0
+				log NAME CHUNK_OFFSET CHUNK_SIZE 0 CHUNK_XSIZE	
+			else
+				clog NAME CHUNK_OFFSET CHUNK_ZSIZE CHUNK_SIZE 0 CHUNK_XSIZE
+			endif			
+			
+            math TMP_SIZE - CHUNK_SIZE
+			math OFFSET + CHUNK_XSIZE
+        next x
+        append
+		
+    else
+        # the file offset points to an entry containing
+        # the "same" OFFSET ZSIZE SIZE ZIP HASH ZERO fields,
+        # just an additional backup... so let's skip them
+        savepos BASE_OFF TOC_FILE
+        math BASE_OFF - TMP_OFF
+        math OFFSET + BASE_OFF
+        math XSIZE = ZSIZE
+        if ENCRYPTED != 0
+            callfunction SET_AES_KEY 1
+            math XSIZE x 16
+        endif	
+		if ZIP == 0
+			math BLOCK = 0x40000000
+			xmath FSIZE "OFFSET + ZSIZE" 
+			log NAME 0 0
+			append
+			for OFFSET = OFFSET < FSIZE
+				xmath DIFF "FSIZE - OFFSET"
+				if DIFF < BLOCK
+					math XSIZE = DIFF
+					if ENCRYPTED != 0
+						math XSIZE x 16
+					endif
+					log NAME OFFSET DIFF 0 XSIZE
+				else
+					log NAME OFFSET BLOCK
+				endif
+				math OFFSET + BLOCK
+			next
+			append
+		else
+			clog NAME OFFSET ZSIZE SIZE 0 XSIZE
+		endif
+    endif
+    encryption "" ""
+
+    if ALTERNATIVE_MODE != 0
+		if CHUNKS == 0
+			math OFFSET + XSIZE
+		endif
+		goto OFFSET
+
+		get TMP1 longlong
+		get CHECK byte
+		if TMP1 == 0 && CHECK != 0
+			goto OFFSET
+			continue NEXT1
+		else
+			goto OFFSET
+		endif
+		xmath CHECK "0x800 - (OFFSET % 0x800)"
+		if CHECK <= 16
+			padding 0x800
+		endif	
+		
+		savepos OFFSET
+		get TMP1 longlong
+		get TMP2 longlong
+		if TMP2 == 0
+			padding 0x800
+		else
+			goto OFFSET
+		endif
+		
+		label NEXT1
+    endif
+	
+	label NEXT0
+next i
+
+print "\nEntries ignored: %SKIP_COUNT%"
+for i = 0 < SKIP_COUNT
+	getarray NAME 7 i
+	print "Ignored entry: %NAME%"
+next i
+
+startfunction SET_AES_KEY_ASK
+    math AES_KEY_IS_SET = 1
+    print "The archive is encrypted, you need to provide the key"
+	if AES_KEY == ""
+		set KEY unknown "???"
+	else
+		set KEY binary AES_KEY
+	endif
+	
+    if KEY == ""
+        math AES_KEY_IS_SET = -1
+        set AES_KEY string "No key provided, encryption disabled"
+    elif KEY strncmp "0x"
+        string KEY << 2
+        string AES_KEY h KEY
+    else
+        set AES_KEY binary KEY
+    endif
+    print "KEY: %AES_KEY%"
+endfunction
+
+startfunction SET_AES_KEY
+    if AES_KEY_IS_SET == 0
+        callfunction SET_AES_KEY_ASK 1
+		if CHECK_GUID != 0
+			callfunction GET_KEY 1
+		endif			
+    endif
+    if AES_KEY_IS_SET > 0
+        if NEW = 1
+			encryption calldll "MEMORY_FILE100 decryptAll tcc RET AES_KEY #INPUT# #OUTPUT# #INPUT_SIZE#"
+		else
+			encryption aes AES_KEY "" 0 32
+		endif
+    endif
+endfunction
+
+startfunction GET_BASE_PATH
+    get NAMESZ long TOC_FILE5
+	getdstring BASE_PATH NAMESZ TOC_FILE5
+	if NAMESZ != 0x0A && NAMESZ < 0xFF
+		string BASE_PATH | "../../../"
+		math BASE_PATH_INCLUDED = 0
+	endif
+endfunction
+
+startfunction CHECK_UNICODE
+	if NAMESZ >= 0
+		getdstring RESULT NAMESZ TOC_FILE5
+	else
+		math NAMESZ n NAMESZ
+		math NAMESZ * 2
+		getdstring RESULT NAMESZ TOC_FILE5
+		set RESULT unicode RESULT
+	endif
+endfunction
+
+startfunction GET_NAME_AND_OFFSET
+	if NAME_FROM_ARRAY = 1
+		if CURR_NAME < DIR_FILES
+			getarray NAME 5 CURR_NAME
+			getarray OFFSET 6 CURR_NAME
+			goto OFFSET
+			math CURR_NAME + 1
+			if CURR_NAME = DIR_FILES
+				math NAME_FROM_ARRAY = 0
+			endif
+		endif
+	else	
+		if DIR_FLAG = 1
+			get DIR_COUNT long TOC_FILE5
+			math DIR_FLAG = 0
+		endif
+		
+		if DIR_COUNT = 0
+			math DIR_FLAG = 1
+			callfunction GET_NAME_AND_OFFSET 1
+		else
+			math DIR_COUNT - 1
+			get NAMESZ signed_long TOC_FILE5
+			callfunction CHECK_UNICODE 1
+			string DIR_NAME = RESULT
+			get DIR_FILES long TOC_FILE5
+			if DIR_FILES = 0
+				callfunction GET_NAME_AND_OFFSET 1
+			else 
+				for y = 0 < DIR_FILES
+					get NAMESZ signed_long TOC_FILE5
+					callfunction CHECK_UNICODE 1
+					string NAME = RESULT
+					string NAME p "%s%s" DIR_NAME NAME
+					if BASE_PATH_INCLUDED == 0
+						string NAME p "%s%s" BASE_PATH NAME
+					endif
+					putarray 5 y NAME
+					
+					get OFFSET long TOC_FILE5
+					savepos TMP_INDEX_OFF TOC_FILE5
+					if OFFSET != 0x80000000 && OFFSET != 0x7FFFFFFF 
+						xmath INDEX_OFF "BASE_INDEX_OFF + OFFSET"
+						goto INDEX_OFF TOC_FILE5
+						get FLAGS long TOC_FILE5
+						xmath HAS_SIZE "FLAGS & 0x3F"	
+						xmath IS_64 "FLAGS >> 28"
+						if HAS_SIZE = 0x3F
+							get CHUNK_SIZE long TOC_FILE5
+						endif
+						if IS_64 = 0xE
+							get OFFSET long TOC_FILE5
+						else
+							get OFFSET longlong TOC_FILE5							
+						endif
+					else 
+						putarray 7 SKIP_COUNT NAME
+						math SKIP_COUNT + 1
+						string NAME = ""
+						putarray 5 y NAME
+					endif
+					putarray 6 y OFFSET
+					goto TMP_INDEX_OFF TOC_FILE5
+				next y
+				math NAME_FROM_ARRAY = 1
+				math CURR_NAME = 0
+				callfunction GET_NAME_AND_OFFSET 1
+			endif
+		endif
+	endif
+endfunction
+
+startfunction COMPRESSION_TYPE
+	if COMP1 = ""
+		comtype zlib
+	endif
+	
+	if ZIP = 1 && COMP1 = "zlib"
+		comtype zlib
+	elif ZIP = 1 && COMP1 = "zstd"
+		comtype zstd
+	elif ZIP = 1 && COMP1 = "oodle"
+		comtype oodle
+	elif ZIP = 1 && COMP1 = "lz4"
+		comtype lz4
+	elif ZIP = 1 && COMP1 = "gzip"
+		comtype gzip
+	elif ZIP = 2 && COMP2 = "zlib"
+		comtype zlib
+	elif ZIP = 2 && COMP2 = "zstd"
+		comtype zstd
+	elif ZIP = 2 && COMP2 = "oodle"
+		comtype oodle
+	elif ZIP = 2 && COMP2 = "lz4"
+		comtype lz4
+	elif ZIP = 2 && COMP2 = "gzip"
+		comtype gzip
+	elif ZIP = 3 || ZIP = 4 || ZIP = 0x10 # 3 - Faith of Danschant, 4 - Days Gone, 10 - Ashen
+		comtype oodle
+		if WORKAROUND == 2
+			comtype lz4
+		endif
+	endif
+endfunction
+
+startfunction QUICKBMS_4GB_CHECK
+    math TMP64 = 0x10000000
+    math TMP64 * 16
+    if TMP64 == 0
+        print "You must use quickbms_4gb_files.exe with this script!"
+        cleanexit
+    endif
+endfunction
+
+startfunction GET_KEY
+	open FDSE KEYFILE 2 EXIST
+	
+	if EXIST = 0
+		print "%KEYFILE% is required for this package!"
+		cleanexit
+	else
+		if NEW = 1
+			get TSIZE asize 2
+			log MEMORY_FILE2 0 TSIZE 2
+			math MEM2 = -2
+			
+			callfunction FIND_OFFSET_JSON 1
+		else
+			get TSIZE asize 2
+			encryption aes AES_KEY "" 0 32
+			log MEMORY_FILE2 0 TSIZE 2
+			math MEM2 = -2
+			
+			callfunction FIND_OFFSET 1
+		endif
+	endif	
+endfunction
+
+startfunction FIND_OFFSET
+	findloc TOFFSET binary GUID MEM2 ""
+	if TOFFSET != ""
+		goto TOFFSET MEM2
+		getdstring GUID 16 MEM2
+		get TNAMEZ long MEM2
+		getdstring TNAME TNAMEZ MEM2
+		get KEY_SIZE long MEM2
+		if KEY_SIZE != 32
+			callfunction FIND_OFFSET 1
+		else
+			getdstring AES_KEY KEY_SIZE MEM2
+		endif
+	else
+		print "Key not found!"
+		cleanexit
+	endif
+endfunction
+
+startfunction FIND_OFFSET_JSON
+	for j = 0 < 16
+		getvarchr TMP GUID j long
+		reverselong TMP
+		putvarchr GUID j TMP long
+		math j + 4
+	next	
+	string GUID 0b GUID
+	
+	findloc TOFFSET binary GUID MEM2 ""
+	if TOFFSET != ""
+		goto TOFFSET MEM2
+		getdstring GUID 32 MEM2
+		getdstring PAD 9 MEM2
+		getdstring KEY 64 MEM2
+		string AES_KEY h KEY
+	else
+		print "Key not found!"
+		cleanexit
+	endif
+endfunction
+
+startfunction DUMP_KEYS
+	string TXT_NAME = "nikki_keys.txt"
+	callfunction SET_AES_KEY 1
+	
+	open FDSE KEYFILE 2 EXIST
+	if EXIST = 0
+		print "%KEYFILE% is required!"
+		cleanexit
+	else
+		set TMP binary "\x0A"
+		log MEMORY_FILE5 0 0
+		math MEM5 = -5
+
+		get SIZE asize 2
+		log MEMORY_FILE2 0 SIZE 2
+		encryption "" ""
+		math MEM2 = -2
+		
+		math NEW_CHAIN = 1
+		get ENTRIES long MEM2
+		get CHECK long MEM2
+		if CHECK u> 0xFF
+			math NEW_CHAIN = 0
+		endif
+		
+		goto 0 MEM2
+		if NEW_CHAIN = 1		
+			get ENTRIES long MEM2
+			for i = 0 < ENTRIES
+				get NAMEZ long MEM2
+				getdstring PAK_NAME NAMEZ MEM2
+				getdstring GUID 16 MEM2
+			next i
+		endif
+		
+		string BASE_KEY = "0x"
+		string AES_KEY 0b AES_KEY
+		string BASE_KEY + AES_KEY
+		putdstring BASE_KEY 66 MEM5
+		putct TMP string -1 MEM5
+			
+		get ENTRIES long MEM2
+		for i = 0 < ENTRIES
+			getdstring GUID 16 MEM2
+			get NAMEZ long MEM2
+			getdstring PAK_NAME NAMEZ MEM2
+			get KEY_SIZE long MEM2
+			getdstring KEY KEY_SIZE MEM2
+			
+			string AES_KEY = "0x"
+			string KEY 0b KEY
+			string AES_KEY + KEY
+			putdstring AES_KEY 66 MEM5
+			putct TMP string -1 MEM5
+		next i
+		
+		get SIZE asize MEM5
+		log TXT_NAME 0 SIZE MEM5
+	endif	
+	cleanexit
+endfunction
+
+startfunction DUMP_KEYS_JSON
+	string TXT_NAME = "nikki_keys.txt"
+	
+	open FDSE KEYFILE 2 EXIST
+	if EXIST = 0
+		print "%KEYFILE% is required!"
+		cleanexit
+	else
+		set TMP binary "\x0A"
+		log MEMORY_FILE5 0 0
+		math MEM5 = -5
+
+		get SIZE asize 2
+		log MEMORY_FILE2 0 SIZE 2
+		math MEM2 = -2
+		math SIZE - 4
+		
+		string BASE_KEY = "0x"
+		findloc TOFFSET binary "\x4B\x65\x79\x22" MEM2 ""
+		math TOFFSET + 6
+		goto TOFFSET MEM2
+		getdstring KEY 64 MEM2	
+		string BASE_KEY + KEY
+		putdstring BASE_KEY 66 MEM5
+		putct TMP string -1 MEM5
+			
+		math TOFFSET = 0
+		for TOFFSET = TOFFSET < SIZE
+			findloc TOFFSET binary "\x6B\x65\x79\x22" MEM2 ""
+			if TOFFSET != ""
+				math TOFFSET + 6
+				goto TOFFSET MEM2
+				getdstring KEY 64 MEM2			
+				savepos TOFFSET MEM2
+			else
+				break
+			endif
+			
+			string AES_KEY = "0x"
+			string AES_KEY + KEY
+			putdstring AES_KEY 66 MEM5
+			putct TMP string -1 MEM5
+		next
+		
+		get SIZE asize MEM5
+		log TXT_NAME 0 SIZE MEM5
+	endif	
+	cleanexit
+endfunction
