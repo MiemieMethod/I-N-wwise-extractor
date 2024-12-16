@@ -35,6 +35,7 @@ def unpackPaks():
                             encoding='utf-8')
 
 def decodeWems():
+    print("[Main] decoding wems...")
     for root, dirs, files in os.walk("output/unpacked/X6Game/Content/Audio/Media"):
         for file in files:
             if file.endswith(".wem"):
@@ -54,6 +55,7 @@ def elegantCopy(source, dest):
     return False
 
 def processBanks():
+    print("[Main] processing banks...")
     with open("output/unpacked/X6Game/Content/Audio/GeneratedSoundBanks/Windows/SoundbanksInfo.json", "r", encoding="utf-8") as f:
         banks = json.load(f)
 
@@ -76,4 +78,8 @@ def processBanks():
 if __name__ == '__main__':
     # unpackPaks()
     # decodeWems()
-    processBanks()
+    # processBanks()
+
+    from video import buildAss, generateVideo
+    buildAss()
+    # generateVideo()
