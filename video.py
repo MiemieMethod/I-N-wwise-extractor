@@ -14,13 +14,13 @@ def elegantCopy(source, dest):
     return False
 
 def buildAss():
-    if not os.path.exists("output/audio"):
-        os.mkdir("output/audio")
+    if not os.path.exists("output/audio1"):
+        os.mkdir("output/audio1")
 
     for root, dirs, files in os.walk("output/real/SFX/bgm"):
         for file in files:
             if file.endswith(".wav"):
-                path = root.replace("output/real/SFX/bgm", "output/audio") + "/" + file
+                path = root.replace("output/real/SFX/bgm", "output/audio1") + "/" + file
                 # elegantCopy(root + "/" + file, path)
                 assPath = path.replace(".wav", ".ass")
                 assTitle = FILE_MAP[os.path.basename(file)]
@@ -62,12 +62,14 @@ Comment: 0,0:00:05.00,0:00:07.00,Default,,0,0,0,,args:ar=48000"
                 with open(assPath, "w", encoding="utf-8") as f:
                     f.write(assContent)
 
-def generateVideo():
+def generateVideo(reverse=False):
     if not os.path.exists("output/video"):
         os.mkdir("output/video")
 
     for path in GENERATE_VIDEO_PATHS:
         for root, dirs, files in os.walk(path):
+            if reverse:
+                files.reverse()
             for file in files:
                 if file.endswith(".ass"):
                     if os.path.exists(f"output/video/{FILE_MAP[os.path.basename(file.replace(".ass", ".wav"))].replace(" | ", "｜")}.mkv"):
