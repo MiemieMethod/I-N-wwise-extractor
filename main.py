@@ -36,11 +36,11 @@ def unpackPaks():
 
 def decodeWems():
     print("[Main] decoding wems...")
-    for root, dirs, files in os.walk("output/unpacked/X6Game/Content/Audio/Media"):
+    for root, dirs, files in os.walk("E:/I-N-Data/X6Game/Content/Audio/Media"):
         for file in files:
             if file.endswith(".wem"):
                 path = root.replace("\\", "/") + "/" + file
-                short_path = path.replace("output/unpacked/X6Game/Content/Audio/Media/", "").replace("wem", "wav")
+                short_path = path.replace("E:/I-N-Data/X6Game/Content/Audio/Media/", "").replace("wem", "wav")
                 if not os.path.exists(f"output/decode/{short_path}"):
                     os.makedirs(os.path.dirname(f"output/decode/{short_path}"), exist_ok=True)
                 subprocess.run(
@@ -56,7 +56,7 @@ def elegantCopy(source, dest):
 
 def processBanks():
     print("[Main] processing banks...")
-    with open("output/unpacked/X6Game/Content/Audio/GeneratedSoundBanks/Windows/SoundbanksInfo.json", "r", encoding="utf-8") as f:
+    with open("E:/I-N-Data/X6Game/Content/Audio/SoundbanksInfo.json", "r", encoding="utf-8") as f:
         banks = json.load(f)
 
     if not os.path.exists("output/real"):
@@ -64,7 +64,7 @@ def processBanks():
 
     banksData = banks["SoundBanksInfo"]["SoundBanks"]
     for bank in banksData:
-        print(f"processing {bank['ShortName']}")
+        # print(f"processing {bank['ShortName']}")
         if "Media" not in bank:
             continue
         medias = bank["Media"]
@@ -76,10 +76,14 @@ def processBanks():
             elegantCopy(path, copyPath)
 
 if __name__ == '__main__':
-    # unpackPaks()
+    unpackPaks()
     # decodeWems()
     # processBanks()
 
-    from video import buildAss, generateVideo
-    buildAss()
+    from video import buildAss, generateVideo, decodeVersionWems
+    # decodeVersionWems()
+    # buildAss()
     # generateVideo()
+    # generateVideo()
+    # generateVideo(True)
+    # generateVideo(True)
